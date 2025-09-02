@@ -51,7 +51,6 @@ def fun_challenge(input_list):
     # Step 4
     operation_count += 1  # return statement # O(1) --> Constant Time           
     return a, operation_count
-
 # Big O(3 + 3n) --> Linear Time
 
 # Example usage
