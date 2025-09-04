@@ -1,7 +1,13 @@
 def fibonacci(n):   
+    cache = {}  # O(n)
     if n < 2:
         return n
-    return fibonacci(n - 1) + fibonacci(n - 2)
+    if n in cache:
+        return cache[n]
+    else:
+        cache[n] = fibonacci(n - 1) + fibonacci(n - 2)
+        return cache[n]
+    #   return fibonacci(n - 1) + fibonacci(n - 2)  # O(2^n)
 
 print(fibonacci(10))
 
